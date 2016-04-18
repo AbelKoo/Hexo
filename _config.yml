@@ -6,7 +6,7 @@
 title: Hexo
 subtitle:
 description:
-author: John Doe
+author: Abel
 language:
 timezone:
 
@@ -69,5 +69,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:AbelKoo/blog.abel.github.io.git
+  repository: git@github.com:AbelKoo/abel.github.io.git
   branch: master
