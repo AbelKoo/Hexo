@@ -1,7 +1,8 @@
 ---
 title: Hexo+NexT+github搭建
 date: 2016-04-18 13:55:55
-tags: Hexo
+tags: "Hexo"
+categories: Hexo
 ---
 本文介绍了使用Hexo+github搭建自己的静态博客的详细过程。
 - 花了点时间，在github上搭建了自己的博客，既然完成了，那么老规矩发个教程作为首篇。
