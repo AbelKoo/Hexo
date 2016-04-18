@@ -72,4 +72,80 @@ $ npm install
 #### themes ####
 主题 文件夹。Hexo 会根据主题来生成静态页面。
 
+# 3 运行 #
+## 3.1 本地运行 ##
+{%code%}
+hexo server
+{%endcode%}
+执行成功后，可以通过localhost:4000进行访问。
+## 3.2 hexo常用命令 ##
+{%code%}
+hexo n     # new
+hexo g     # generate
+hexo s     # server
+hexo d     # deploy
+{%endcode%}
 
+
+# 4 部署到github上 #
+## 4.1 github新建Repository ##
+- 注意: 该仓库必须按照此格式命名: XXXX.github.io
+- XXXX必须为你的github用户名（非邮箱等，不然搭建之后会有404）
+
+## 4.2_config.yml ##
+找到以下内容，并修改
+{%code%}
+deploy:
+  type: git
+  repository: git@github.com:XXXX/XXXX.github.io.git
+  branch: master
+{%endcode%}
+
+- 5.0以上type为git，不在使用github，不然将找不到github。
+- 使用ssh，而不是https
+
+## 4.3 发布至github ##
+{%code%}
+hexo g
+hexo d # 部署到github
+
+Username for 'https://github.com':
+hhstore   # 输入用户名
+
+Password for 'https://XXXX@github.com':
+XXXXX    # 提示输入用户密码.
+
+INFO  Deploy done: git  # 提示部署成功.
+{%endcode%}
+- 若执行成功,会自动将public内容 同步到 hhstore.github.io 仓库.
+- 若报错:ERROR Deployer not found: git , 执行如下命令:
+{%code%}
+npm install hexo-deployer-git --save
+{%endcode%}
+执行成功之后再执行一次：
+{%code%}
+hexo d
+{%endcode%}
+
+
+以上步骤无误，访问地址：XXXX.github.io
+
+# 5 使用NexT #
+主题：[NexT](http://notes.iissnan.com/)
+## 5.1 下载NexT ##
+{%code%}
+cd your-hexo-site
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+{%endcode%}
+## 5.2 使用NexT ##
+编辑_config.yml，找到以下内容：
+{%code%}
+theme: next
+{%endcode%}
+修改为NexT
+## 5.3 更新 ##
+{%code%}
+hexo g
+hexo d
+{%endcode%}
+成功之后打开博客地址
