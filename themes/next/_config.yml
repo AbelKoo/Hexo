@@ -25,10 +25,10 @@ rss:
 menu:
   home: /
   categories: /categories
-  about: /about
   archives: /archives
   tags: /tags
-  #commonweal: /404.html
+  about: /about
+  commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -55,8 +55,8 @@ menu_icons:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
-#scheme: Pisces
+#scheme: Mist
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -226,10 +226,10 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: ddece71d6586dc27ff229a405929c837
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: abelkooo
 
 # Disqus
 #disqus_shortname:
