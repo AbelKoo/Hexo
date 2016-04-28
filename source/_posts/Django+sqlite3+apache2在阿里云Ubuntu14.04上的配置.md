@@ -47,7 +47,7 @@ sudo apt-get install sqlite3
 在安装完apache2以及wsgi之后：
 
 ```
-cd /tc/apache2
+cd /etc/apache2
 sudo nano apache2.conf
 
 ```
@@ -61,6 +61,8 @@ sudo nano apache2.conf
         Allow from all #新增 因为我们用它作为服务器，所以允许所有的请求
 </Directory>
 ```
+不然在后续启动站点的时候会有：
+![](http://i.imgur.com/qujGgX7.png)
 # 建立Django项目 #
 ```
 sudo mkdir /home/django
@@ -116,10 +118,21 @@ sudo nano mySite.conf
 
 如果要添加域名可以再ServerName 设置
 
+如果这里使用80端口，那么在site-available文件下找到000-default.conf
+修改此文件的端口。
+
 ## 启动站点 ##
 ```
-sudo a2ensite mysite
+sudo a2ensite mySite
 sudo service apache2 reload
 ```
 
 这个时候就能正常访问站点了
+![](http://i.imgur.com/m0vPrzT.png)
+
+# Tips #
+查看apache2 的log文件 
+```
+cd /var/log/apache2
+tail error.log
+```
